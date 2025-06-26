@@ -1,12 +1,18 @@
 const express = require('express');
 const app = express();
+const morgan= require(morgan);
+const cors = require(cors);
 
 // Configurar el servidor
+
 app.set('port', process.env.PORT || 3000);
 app.set('json spaces', 2);
 
 // Middleware para aceptar JSON
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+app.use(cors());
 
 // Rutas GET
 app.get('/', (req, res) => {
