@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const morgan= require(morgan);
-const cors = require(cors);
+const morgan= require('morgan');
+const cors = require('cors');
 
 // Configurar el servidor
 
