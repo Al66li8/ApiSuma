@@ -27,7 +27,7 @@ app.get('/mensaje', (req, res) => {
     res.json({ 'Title': 'Este es mi nuevo servidor' });
 });
 
-// Ruta POST para suma
+// Ruta POST para suma y edad
 app.post('/sumar', (req, res) => {
     const { num1, num2 } = req.body;
 
